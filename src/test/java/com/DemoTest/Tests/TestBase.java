@@ -27,6 +27,8 @@ import java.rmi.UnexpectedException;
 public  class TestBase  {
 
 
+    // added build tag
+
     private static final String  targetEnvironment = null;
     private static final int sauce = 0;
 	public String buildTag = System.getenv("BUILD_TAG");
@@ -146,6 +148,10 @@ public  class TestBase  {
             caps.setCapability("name", methodName);
             caps.setCapability("tage", Constants.tagSimulator);
 
+        if (buildTag != null) {
+            caps.setCapability("build", buildTag);
+        }
+
             webDriver.set(new RemoteWebDriver(new URL(sauceURL), caps));
 
         // set current sessionId
@@ -163,6 +169,10 @@ public  class TestBase  {
         caps.setCapability("platformVersion",os);
         caps.setCapability("name", methodName);
         caps.setCapability("tage", Constants.tagEmulator);
+
+        if (buildTag != null) {
+            caps.setCapability("build", buildTag);
+        }
 
         // Launch remote browser and set it as the current thread
         //       webDriver.set(new RemoteWebDriver(new URL("https://" +Constants.sauceUsername+ ":" +Constants.saucePassword+ "@ondemand.saucelabs.com:443/wd/hub"), capabilities));
@@ -188,9 +198,13 @@ public  class TestBase  {
                 capabilities.setCapability("name", methodName);
                 capabilities.setCapability("extendedDebugging", Constants.isDebugFlag);
                 capabilities.setCapability("tags", Constants.tag);
-                capabilities.setCapability("build", Constants.buildNumber);
+              //  capabilities.setCapability("build", Constants.buildNumber);
                 //      capabilities.setCapability("TunnelIdentifier", Constants.tunnelIdentifier);
                 capabilities.setCapability("prerun", obj);
+
+        if (buildTag != null) {
+            capabilities.setCapability("build", buildTag);
+        }
 
         // Launch remote browser and set it as the current thread
         //       webDriver.set(new RemoteWebDriver(new URL("https://" +Constants.sauceUsername+ ":" +Constants.saucePassword+ "@ondemand.saucelabs.com:443/wd/hub"), capabilities));
@@ -215,9 +229,13 @@ public  class TestBase  {
         capabilities.setCapability("name", methodName);
         capabilities.setCapability("extendedDebugging", Constants.isDebugFlag);
         capabilities.setCapability("tags", Constants.tag);
-        capabilities.setCapability("build", Constants.buildNumber);
+     //   capabilities.setCapability("build", Constants.buildNumber);
   //      capabilities.setCapability("TunnelIdentifier", Constants.tunnelIdentifier);
         capabilities.setCapability("prerun", obj);
+
+        if (buildTag != null) {
+            capabilities.setCapability("build", buildTag);
+        }
 
         // Launch remote browser and set it as the current thread
  //       webDriver.set(new RemoteWebDriver(new URL("https://" +Constants.sauceUsername+ ":" +Constants.saucePassword+ "@ondemand.saucelabs.com:443/wd/hub"), capabilities));
@@ -239,6 +257,10 @@ public  class TestBase  {
         // capabilities.setCapability("recordDeviceVitals", true);
         //  capabilities.setCapability("cacheId", "testDemo");
         //  capabilities.setCapability("noReset", true); // testobject_suite_name
+
+        if (buildTag != null) {
+            capabilities.setCapability("build", buildTag);
+        }
 
         webDriver.set(new RemoteWebDriver(new URL(sauceURL), capabilities));
 
