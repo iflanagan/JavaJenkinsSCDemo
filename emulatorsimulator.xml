@@ -6,7 +6,7 @@
             <class name="com.DemoTest.Tests.WebDemoTest">
                 <methods>
                     <include name="pageValidationEmulator"/>
-                    <!--<include name="pageValidationSimulator"/>-->
+                    <include name="pageValidationSimulator"/>
                 </methods>
             </class>
         </classes>
