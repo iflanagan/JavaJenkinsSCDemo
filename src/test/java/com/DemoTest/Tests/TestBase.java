@@ -1,9 +1,6 @@
 package com.DemoTest.Tests;
 
-import com.saucelabs.common.SauceOnDemandAuthentication;
-import com.saucelabs.common.SauceOnDemandSessionIdProvider;
-import com.saucelabs.testng.SauceOnDemandAuthenticationProvider;
-import com.saucelabs.testng.SauceOnDemandTestListener;
+import io.appium.java_client.android.AndroidDriver;
 
 import org.json.simple.JSONObject;
 import org.openqa.selenium.JavascriptExecutor;
@@ -15,10 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Parameters;
 
-import java.io.File;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -46,6 +40,7 @@ public  class TestBase  {
      * ThreadLocal variable which contains the Sauce Job Id.
      */
     private ThreadLocal<String> sessionId = new ThreadLocal<String>();
+    private ThreadLocal<AndroidDriver> driver = new ThreadLocal<AndroidDriver>();
 
     /**
      * DataProvider that explicitly sets the browser combinations to be used.
@@ -215,7 +210,7 @@ public  class TestBase  {
         sessionId.set(id);
     }
 
-    protected void createDriver(String browser, String version, String os, String methodName)  throws MalformedURLException, UnexpectedException {
+    protected AndroidDriver createDriver(String browser, String version, String os, String methodName)  throws MalformedURLException, UnexpectedException {
 
         JSONObject obj = new JSONObject();
         obj.put("executable",Constants.preRunScriptFile);
@@ -244,29 +239,57 @@ public  class TestBase  {
         // set current sessionId
         String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
         sessionId.set(id);
+        return null;
     }
 
-    protected void createDriverRDC(String platformName, String platformVersion, String deviceName, String methodName)
+    protected AndroidDriver createDriverRDC(String platformName,String deviceName, String methodName)
             throws MalformedURLException, UnexpectedException {
 
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("deviceName", deviceName);
+       // capabilities.setCapability("platformVersion", platformVersion);
+        capabilities.setCapability("platformName", platformName);
+        capabilities.setCapability("name",  methodName);
+        capabilities.setCapability("app","sauce-storage:Calculator_2.0.apk");
+
+       // RemoteWebDriver rdcDriver  = new RemoteWebDriver(new URL(sauceURL), capabilities);
+        driver.set(new AndroidDriver<WebElement>(new URL(sauceURL), capabilities));
+
+        return driver.get();
+
+       /* AppiumDriver driver = null;
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", deviceName);
         capabilities.setCapability("platformVersion", platformVersion);
         capabilities.setCapability("platformName", platformName);
         capabilities.setCapability("name",  methodName);
-        // capabilities.setCapability("recordDeviceVitals", true);
-        //  capabilities.setCapability("cacheId", "testDemo");
-        //  capabilities.setCapability("noReset", true); // testobject_suite_name
+        capabilities.setCapability("app","sauce-storage:Calculator_2.0.apk");
 
         if (buildTag != null) {
             capabilities.setCapability("build", buildTag);
+        }*/
+/*
+        if (platformName.equals("iOS"))
+        {
+           // driver = new IOSDriver(sauceURL, capabilities);
+            driver = new RemoteWebDriver(sauceURL, capabilities);
         }
 
+        {
+            driver = new AndroidDriver(sauceURL, capabilities);
+        }*/
+/*
+      RemoteWebDriver rdcDriver  = new RemoteWebDriver(new URL(sauceURL), capabilities); // new URL(sauceURL), caps
+        webDriver.set(new RemoteWebDriver(new URL(sauceURL), capabilities));
         webDriver.set(new RemoteWebDriver(new URL(sauceURL), capabilities));
 
-        // set current sessionId
-        String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
-        sessionId.set(id);
+        String id = webDriver.getSessionId().toString();
+       String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+        sessionId.set(id);*/
+
+
+
+
     }
 
 

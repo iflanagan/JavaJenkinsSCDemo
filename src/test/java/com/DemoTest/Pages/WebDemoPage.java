@@ -1,6 +1,5 @@
 package com.DemoTest.Pages;
 
-import com.thoughtworks.selenium.webdriven.commands.SeleniumSelect;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
