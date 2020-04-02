@@ -1,5 +1,5 @@
 #surefire
-#Thu Apr 02 10:55:28 CDT 2020
+#Thu Apr 02 12:37:31 CDT 2020
 classPathUrl.50=/Users/ianflanagan/.m2/repository/org/springframework/spring-core/5.1.8.RELEASE/spring-core-5.1.8.RELEASE.jar
 classPathUrl.51=/Users/ianflanagan/.m2/repository/org/springframework/spring-jcl/5.1.8.RELEASE/spring-jcl-5.1.8.RELEASE.jar
 classPathUrl.52=/Users/ianflanagan/.m2/repository/org/springframework/spring-expression/5.1.8.RELEASE/spring-expression-5.1.8.RELEASE.jar
@@ -10,7 +10,7 @@ classPathUrl.55=/Users/ianflanagan/.m2/repository/org/apache/maven/surefire/sure
 classPathUrl.56=/Users/ianflanagan/.m2/repository/org/apache/maven/surefire/surefire-grouper/2.12.4/surefire-grouper-2.12.4.jar
 classPathUrl.48=/Users/ianflanagan/.m2/repository/org/springframework/spring-aop/5.1.8.RELEASE/spring-aop-5.1.8.RELEASE.jar
 classPathUrl.49=/Users/ianflanagan/.m2/repository/org/springframework/spring-beans/5.1.8.RELEASE/spring-beans-5.1.8.RELEASE.jar
-runStatisticsFile=/Users/ianflanagan/Workspace/JavaClass/JavaWebDemo/responsivewebdemo/.surefire-2E784D0576FF13B6BAB346E73A85696620AE39EC
+runStatisticsFile=/Users/ianflanagan/Workspace/JavaClass/JavaWebDemo/responsivewebdemo/.surefire-6C0C1158FA80ED6A78719D50851E2C2CF448FD0B
 surefireClassPathUrl.7=/Users/ianflanagan/.m2/repository/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.jar
 surefireClassPathUrl.8=/Users/ianflanagan/.m2/repository/org/apache/maven/plugin-tools/maven-plugin-annotations/3.1/maven-plugin-annotations-3.1.jar
 surefireClassPathUrl.5=/Users/ianflanagan/.m2/repository/org/apache/maven/surefire/surefire-api/2.12.4/surefire-api-2.12.4.jar
@@ -88,7 +88,7 @@ classPathUrl.26=/Users/ianflanagan/.m2/repository/commons-lang/commons-lang/2.6/
 classPathUrl.27=/Users/ianflanagan/.m2/repository/com/saucelabs/sauce_testng/2.1.23/sauce_testng-2.1.23.jar
 classPathUrl.28=/Users/ianflanagan/.m2/repository/com/saucelabs/sauce_java_common/2.1.23/sauce_java_common-2.1.23.jar
 classPathUrl.29=/Users/ianflanagan/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar
-testSuiteXmlFiles0=/Users/ianflanagan/Workspace/JavaClass/JavaWebDemo/responsivewebdemo/AllLogins.xml
+testSuiteXmlFiles0=/Users/ianflanagan/Workspace/JavaClass/JavaWebDemo/responsivewebdemo/login.xml
 classPathUrl.40=/Users/ianflanagan/.m2/repository/org/ow2/asm/asm/7.1/asm-7.1.jar
 classPathUrl.41=/Users/ianflanagan/.m2/repository/commons-validator/commons-validator/1.6/commons-validator-1.6.jar
 classPathUrl.42=/Users/ianflanagan/.m2/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar

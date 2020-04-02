@@ -1,28 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 392, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 171.47 sec <<< FAILURE!
-LoginDesktopParameterExample(com.DemoTest.Tests.WebDemoTest)  Time elapsed: 26.94 sec  <<< FAILURE!
-java.util.MissingFormatArgumentException: Format specifier '%e'
-	at java.base/java.util.Formatter.format(Formatter.java:2672)
-	at java.base/java.io.PrintStream.format(PrintStream.java:1139)
-	at java.base/java.io.PrintStream.printf(PrintStream.java:1035)
-	at com.DemoTest.Pages.WebDemoPage.Login(WebDemoPage.java:130)
-	at com.DemoTest.Tests.WebDemoTest.LoginDesktopParameterExample(WebDemoTest.java:43)
-
-LoginDesktopParameterExample(com.DemoTest.Tests.WebDemoTest)  Time elapsed: 27.826 sec  <<< FAILURE!
-java.util.MissingFormatArgumentException: Format specifier '%e'
-	at java.base/java.util.Formatter.format(Formatter.java:2672)
-	at java.base/java.io.PrintStream.format(PrintStream.java:1139)
-	at java.base/java.io.PrintStream.printf(PrintStream.java:1035)
-	at com.DemoTest.Pages.WebDemoPage.Login(WebDemoPage.java:130)
-	at com.DemoTest.Tests.WebDemoTest.LoginDesktopParameterExample(WebDemoTest.java:43)
-
-LoginDesktopParameterExample(com.DemoTest.Tests.WebDemoTest)  Time elapsed: 0.514 sec  <<< FAILURE!
-java.util.MissingFormatArgumentException: Format specifier '%e'
-	at java.base/java.util.Formatter.format(Formatter.java:2672)
-	at java.base/java.io.PrintStream.format(PrintStream.java:1139)
-	at java.base/java.io.PrintStream.printf(PrintStream.java:1035)
-	at com.DemoTest.Pages.WebDemoPage.Login(WebDemoPage.java:130)
-	at com.DemoTest.Tests.WebDemoTest.LoginDesktopParameterExample(WebDemoTest.java:43)
-
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.756 sec
