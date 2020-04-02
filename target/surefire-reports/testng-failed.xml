@@ -1,55 +1,295 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Parameter test Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <parameter name="platformVersion" value="8.1"/>
-  <parameter name="platformName" value="Android"/>
-  <parameter name="deviceName" value="Samsung_Galaxy_Tab_S4_POC165"/>
-  <test name="Calculator Test S6">
-    <parameter name="platformVersion" value="7.0"/>
-    <parameter name="platformName" value="Android"/>
-    <parameter name="deviceName" value="Samsung_Galaxy_S6_POC118"/>
+<suite thread-count="19" parallel="tests" name="Failed suite [Parameter test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="os" value="macOS 10.12"/>
+  <parameter name="browser" value="safari"/>
+  <parameter name="version" value="latest"/>
+  <test name="Login Test windows 8.1 and FF">
+    <parameter name="os" value="Windows 8.1"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="version" value="latest"/>
     <classes>
       <class name="com.DemoTest.Tests.WebDemoTest">
         <methods>
-          <include name="pageValidationRDC"/>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
         </methods>
       </class> <!-- com.DemoTest.Tests.WebDemoTest -->
     </classes>
-  </test> <!-- Calculator Test S6 -->
-  <test name="Calculator Test Tab S4">
-    <parameter name="platformVersion" value="8.1"/>
-    <parameter name="platformName" value="Android"/>
-    <parameter name="deviceName" value="Samsung_Galaxy_Tab_S4_POC165"/>
+  </test> <!-- Login Test windows 8.1 and FF -->
+  <test name="Login Test windows 8.1 and FF -1">
+    <parameter name="os" value="Windows 8.1"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="version" value="latest -1"/>
     <classes>
       <class name="com.DemoTest.Tests.WebDemoTest">
         <methods>
-          <include name="pageValidationRDC"/>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
         </methods>
       </class> <!-- com.DemoTest.Tests.WebDemoTest -->
     </classes>
-  </test> <!-- Calculator Test Tab S4 -->
-  <test parallel="tests" name="Calculator Test S6(failed)">
-    <parameter name="platformVersion" value="7.0"/>
-    <parameter name="platformName" value="Android"/>
-    <parameter name="deviceName" value="Samsung_Galaxy_S6_POC118"/>
+  </test> <!-- Login Test windows 8.1 and FF -1 -->
+  <test name="Login Test windows 8.1 and Chrome">
+    <parameter name="os" value="Windows 8.1"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="version" value="latest"/>
     <classes>
       <class name="com.DemoTest.Tests.WebDemoTest">
         <methods>
-          <include name="pageValidationRDC"/>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
         </methods>
       </class> <!-- com.DemoTest.Tests.WebDemoTest -->
     </classes>
-  </test> <!-- Calculator Test S6(failed) -->
-  <test parallel="tests" name="Calculator Test Tab S4(failed)">
-    <parameter name="platformVersion" value="8.1"/>
-    <parameter name="platformName" value="Android"/>
-    <parameter name="deviceName" value="Samsung_Galaxy_Tab_S4_POC165"/>
+  </test> <!-- Login Test windows 8.1 and Chrome -->
+  <test name="Login Test windows 8.1 and Chrome -1">
+    <parameter name="os" value="Windows 8.1"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="version" value="latest -1"/>
     <classes>
       <class name="com.DemoTest.Tests.WebDemoTest">
         <methods>
-          <include name="pageValidationRDC"/>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
         </methods>
       </class> <!-- com.DemoTest.Tests.WebDemoTest -->
     </classes>
-  </test> <!-- Calculator Test Tab S4(failed) -->
+  </test> <!-- Login Test windows 8.1 and Chrome -1 -->
+  <test name="Login Test windows 8.1 and IE">
+    <parameter name="os" value="Windows 8.1"/>
+    <parameter name="browser" value="internet explorer"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test windows 8.1 and IE -->
+  <test name="Login Test windows 10 and Chrome">
+    <parameter name="os" value="Windows 10"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test windows 10 and Chrome -->
+  <test name="Login Test windows 10 and Chrome -1">
+    <parameter name="os" value="Windows 10"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="version" value="latest -1"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test windows 10 and Chrome -1 -->
+  <test name="Login Test windows 10 and FF">
+    <parameter name="os" value="Windows 10"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test windows 10 and FF -->
+  <test name="Login Test windows 10 and FF -1">
+    <parameter name="os" value="Windows 10"/>
+    <parameter name="browser" value="firefox"/>
+    <parameter name="version" value="latest -1"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test windows 10 and FF -1 -->
+  <test name="Login Test windows 10 and internetExplorer">
+    <parameter name="os" value="Windows 10"/>
+    <parameter name="browser" value="internet Explorer"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test windows 10 and internetExplorer -->
+  <test name="Login Test Catalina OS with Safari ">
+    <parameter name="os" value="macOS 10.15"/>
+    <parameter name="browser" value="safari"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test Catalina OS with Safari  -->
+  <test name="Login Test Mojave OS with Safari ">
+    <parameter name="os" value="macOS 10.14"/>
+    <parameter name="browser" value="safari"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test Mojave OS with Safari  -->
+  <test name="Login Test High Sierra OS with Safari ">
+    <parameter name="os" value="macOS 10.13"/>
+    <parameter name="browser" value="safari"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test High Sierra OS with Safari  -->
+  <test name="Login Test Sierra OS with Safari ">
+    <parameter name="os" value="macOS 10.12"/>
+    <parameter name="browser" value="safari"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample"/>
+          <include name="LoginLockedoutUser"/>
+          <include name="LoginPerfGlitchUser"/>
+          <include name="LoginProblemUser"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test Sierra OS with Safari  -->
+  <test parallel="tests" name="Login Test Sierra OS with Safari (failed)">
+    <parameter name="os" value="macOS 10.12"/>
+    <parameter name="browser" value="safari"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test Sierra OS with Safari (failed) -->
+  <test parallel="tests" name="Login Test Catalina OS with Safari (failed)">
+    <parameter name="os" value="macOS 10.15"/>
+    <parameter name="browser" value="safari"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test Catalina OS with Safari (failed) -->
+  <test parallel="tests" name="Login Test High Sierra OS with Safari (failed)">
+    <parameter name="os" value="macOS 10.13"/>
+    <parameter name="browser" value="safari"/>
+    <parameter name="version" value="latest"/>
+    <classes>
+      <class name="com.DemoTest.Tests.WebDemoTest">
+        <methods>
+          <include name="LoginDesktopParameterExample" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.DemoTest.Tests.WebDemoTest -->
+    </classes>
+  </test> <!-- Login Test High Sierra OS with Safari (failed) -->
 </suite> <!-- Failed suite [Parameter test Suite] -->

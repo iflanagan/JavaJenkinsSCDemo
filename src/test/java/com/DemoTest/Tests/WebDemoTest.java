@@ -147,7 +147,6 @@ public class WebDemoTest extends TestBase {
 		//create webdriver session
 		AndroidDriver driver = createDriverRDC(platformName, deviceName, methodName.getName());
 
-
 		/* Get the elements. */
 		this.annotate("Capturing Objects");
 		MobileElement buttonTwo = (MobileElement)(driver.findElement(By.id("net.ludeke.calculator:id/digit2")));
@@ -174,78 +173,78 @@ public class WebDemoTest extends TestBase {
 
 	}
 	    
-//	 @Test(dataProvider = "Browsers")
-//	    public void LoginLockedoutUser(String browser, String version, String os, Method method)
-//	            throws MalformedURLException, InvalidElementStateException, UnexpectedException {
-//
-//	    	Boolean value = true;
-//
-//	        //create webdriver session
-//	        this.createDriver(browser, version, os, method.getName());
-//	        WebDriver driver = this.getWebDriver();
-//
-//	        this.annotate("Visiting sauce labs demo page...");
-//	        WebDemoPage page = WebDemoPage.visitPage(driver);
-//
-//
-//	         //
-//	        this.annotate("Login LoginLockedoutUser user Test..");
-//	        Boolean returnedvaluelockedout = page.LoginLockedoutUser("locked_out_user", "secret_sauce");
-//
-//	        this.annotate("Asserting the test: Login LoginLockedoutUser user Test: result");
-//	        Assert.assertEquals(value, returnedvaluelockedout);
-//
-//
-//	    }
+	 @Test(dataProvider = "Browsers")
+	    public void LoginLockedoutUser(String browser, String version, String os, Method method)
+	            throws MalformedURLException, InvalidElementStateException, UnexpectedException {
+
+	    	Boolean value = true;
+
+	        //create webdriver session
+	        this.createDriver(browser, version, os, method.getName());
+	        WebDriver driver = this.getWebDriver();
+
+	        this.annotate("Visiting sauce labs demo page...");
+	        WebDemoPage page = WebDemoPage.visitPage(driver);
+
+
+	         //
+	        this.annotate("Login LoginLockedoutUser user Test..");
+	        Boolean returnedvaluelockedout = page.LoginLockedoutUser("locked_out_user", "secret_sauce");
+
+	        this.annotate("Asserting the test: Login LoginLockedoutUser user Test: result");
+	        Assert.assertEquals(value, returnedvaluelockedout);
+
+
+	    }
 
 	 
-//	@Test(dataProvider = "Browsers")
-//	    public void LoginPerfGlitchUser(String browser, String version, String os, Method method)
-//	            throws MalformedURLException, InvalidElementStateException, UnexpectedException {
-//
-//	    	Boolean value = true;
-//
-//	        //create webdriver session
-//	        this.createDriver(browser, version, os, method.getName());
-//	        WebDriver driver = this.getWebDriver();
-//
-//	        this.annotate("Visiting sauce labs demo page...");
-//	        WebDemoPage page = WebDemoPage.visitPage(driver);
-//
-//
-//	         //
-//	        this.annotate("Login Performance Glitch user Test..");
-//	        Boolean returnedvalueglitch = page.LoginPerfGlitchUser("performance_glitch_user", "secret_sauce");
-//
-//	        this.annotate("Asserting the test: Login Performance Glitch user Test: result");
-//	        Assert.assertEquals(value,returnedvalueglitch);
-//
-//
-//	    }
+	@Test(dataProvider = "Browsers")
+	    public void LoginPerfGlitchUser(String browser, String version, String os, Method method)
+	            throws MalformedURLException, InvalidElementStateException, UnexpectedException {
+
+	    	Boolean value = true;
+
+	        //create webdriver session
+	        this.createDriver(browser, version, os, method.getName());
+	        WebDriver driver = this.getWebDriver();
+
+	        this.annotate("Visiting sauce labs demo page...");
+	        WebDemoPage page = WebDemoPage.visitPage(driver);
+
+
+	         //
+	        this.annotate("Login Performance Glitch user Test..");
+	        Boolean returnedvalueglitch = page.LoginPerfGlitchUser("performance_glitch_user", "secret_sauce");
+
+	        this.annotate("Asserting the test: Login Performance Glitch user Test: result");
+	        Assert.assertEquals(value,returnedvalueglitch);
+
+
+	    }
 	
 
-//	@Test(dataProvider = "Browsers")
-//	    public void LoginProblemUser(String browser, String version, String os, Method method)
-//	            throws MalformedURLException, InvalidElementStateException, UnexpectedException {
-//
-//	    	Boolean value = true;
-//
-//	        //create webdriver session
-//	        this.createDriver(browser, version, os, method.getName());
-//	        WebDriver driver = this.getWebDriver();
-//
-//	        this.annotate("Visiting sauce labs demo page...");
-//	        WebDemoPage page = WebDemoPage.visitPage(driver);
-//
-//
-//	         //
-//	        this.annotate("Login ProblemUser user Test..");
-//	        Boolean returnedvaluelockedout = page. LoginProblemUser("problem_user", "secret_sauce");
-//
-//	        this.annotate("Asserting the test: Login ProblemUser user Test: result");
-//	        Assert.assertEquals(value, returnedvaluelockedout);
-//
-//
-//	    }
+	@Test(dataProvider = "Browsers")
+	    public void LoginProblemUser(String browser, String version, String os, Method method)
+	            throws MalformedURLException, InvalidElementStateException, UnexpectedException {
+
+	    	Boolean value = true;
+
+	        //create webdriver session
+	        this.createDriver(browser, version, os, method.getName());
+	        WebDriver driver = this.getWebDriver();
+
+	        this.annotate("Visiting sauce labs demo page...");
+	        WebDemoPage page = WebDemoPage.visitPage(driver);
+
+
+	         //
+	        this.annotate("Login ProblemUser user Test..");
+	        Boolean returnedvaluelockedout = page. LoginProblemUser("problem_user", "secret_sauce");
+
+	        this.annotate("Asserting the test: Login ProblemUser user Test: result");
+	        Assert.assertEquals(value, returnedvaluelockedout);
+
+
+	    }
 
 }

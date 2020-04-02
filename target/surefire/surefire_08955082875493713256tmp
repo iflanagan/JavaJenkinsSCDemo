@@ -1,0 +1,6 @@
+#surefire_0
+#Thu Apr 02 10:55:28 CDT 2020
+basedir=/Users/ianflanagan/Workspace/JavaClass/JavaWebDemo/responsivewebdemo
+user.dir=/Users/ianflanagan/Workspace/JavaClass/JavaWebDemo/responsivewebdemo
+suiteFile=AllLogins.xml
+localRepository=/Users/ianflanagan/.m2/repository
