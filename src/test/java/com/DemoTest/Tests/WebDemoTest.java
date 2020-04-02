@@ -189,7 +189,7 @@ public class WebDemoTest extends TestBase {
 
 	         //
 	        this.annotate("Login LoginLockedoutUser user Test..");
-	        Boolean returnedvaluelockedout = page.LoginLockedoutUser("locked_out_user", "secret_sauce");
+	        Boolean returnedvaluelockedout = page.LoginLockedoutUser(Constants.demoLockedUsername, Constants.demoPassword);
 
 	        this.annotate("Asserting the test: Login LoginLockedoutUser user Test: result");
 	        Assert.assertEquals(value, returnedvaluelockedout);
@@ -214,7 +214,7 @@ public class WebDemoTest extends TestBase {
 
 	         //
 	        this.annotate("Login Performance Glitch user Test..");
-	        Boolean returnedvalueglitch = page.LoginPerfGlitchUser("performance_glitch_user", "secret_sauce");
+	        Boolean returnedvalueglitch = page.LoginPerfGlitchUser(Constants.demoperfglitchuser, Constants.demoPassword);
 
 	        this.annotate("Asserting the test: Login Performance Glitch user Test: result");
 	        Assert.assertEquals(value,returnedvalueglitch);
@@ -239,7 +239,7 @@ public class WebDemoTest extends TestBase {
 
 	         //
 	        this.annotate("Login ProblemUser user Test..");
-	        Boolean returnedvaluelockedout = page. LoginProblemUser("problem_user", "secret_sauce");
+	        Boolean returnedvaluelockedout = page. LoginProblemUser(Constants.demoproblemuser, Constants.demoPassword);
 
 	        this.annotate("Asserting the test: Login ProblemUser user Test: result");
 	        Assert.assertEquals(value, returnedvaluelockedout);
