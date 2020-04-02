@@ -57,6 +57,8 @@ public  class TestBase  {
         	 new Object[]{"chrome", "latest", "Windows 10"},
 
      			 // windows 8.1
+                new Object[]{"MicrosoftEdge", "latest", "Windows 10"},
+                new Object[]{"internet explorer", "latest", "Windows 8.1"},
      			new Object[]{"firefox", "latest", "Windows 8.1"},
      			new Object[]{"chrome", "latest", "Windows 8.1"},
      			new Object[]{"firefox", "latest -1", "Windows 8.1"},
@@ -180,10 +182,12 @@ public  class TestBase  {
 
 
     protected void createDriverNew(String browser, String version, String os, String methodName)  throws MalformedURLException, UnexpectedException {
+/*
 
         JSONObject obj = new JSONObject();
         obj.put("executable",Constants.preRunScriptFile);
         obj.put("background","false");
+*/
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
                 // set desired capabilities to launch appropriate browser on Sauce
@@ -195,7 +199,7 @@ public  class TestBase  {
                 capabilities.setCapability("tags", Constants.tag);
               //  capabilities.setCapability("build", Constants.buildNumber);
                 //      capabilities.setCapability("TunnelIdentifier", Constants.tunnelIdentifier);
-                capabilities.setCapability("prerun", obj);
+            //    capabilities.setCapability("prerun", obj);
 
         if (buildTag != null) {
             capabilities.setCapability("build", buildTag);
