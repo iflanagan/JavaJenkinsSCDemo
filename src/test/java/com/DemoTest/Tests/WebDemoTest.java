@@ -58,7 +58,7 @@ public class WebDemoTest extends TestBase {
 
 	    	 System.out.println("\nCreate an instance of the driver");
 	        //create webdriver session
-	        this.createDriver(browser, version, os, method.getName());
+	        this.createDriverNew(browser, version, os, method.getName());
 	        WebDriver driver = this.getWebDriver();
 
 	        this.annotate("Visiting sauce labs demo page...");
