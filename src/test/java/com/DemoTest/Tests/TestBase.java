@@ -205,6 +205,8 @@ public  class TestBase  {
         if (buildTag != null) {
             capabilities.setCapability("build", buildTag);
         }
+        
+        System.out.println("TunnelID is:" +tunnelID);
 
         // Launch remote browser and set it as the current thread
         //       webDriver.set(new RemoteWebDriver(new URL("https://" +Constants.sauceUsername+ ":" +Constants.saucePassword+ "@ondemand.saucelabs.com:443/wd/hub"), capabilities));
