@@ -25,9 +25,10 @@ public  class TestBase  {
 
     private static final String  targetEnvironment = null;
     private static final int sauce = 0;
-	public String buildTag = System.getenv("BUILD_TAG");
+    public String buildTag = System.getenv("BUILD_TAG");
     public static String username = System.getenv("SAUCE_USERNAME");
     public static String accesskey = System.getenv("SAUCE_ACCESS_KEY");
+    public static String tunnelID = System.getenv("TUNNELIDNAME");
 
     public static final String sauceURL = "https://" +username+ ":" +accesskey+ "@ondemand.us-west-1.saucelabs.com/wd/hub";
 
@@ -182,12 +183,12 @@ public  class TestBase  {
 
 
     protected void createDriverNew(String browser, String version, String os, String methodName)  throws MalformedURLException, UnexpectedException {
-/*
+
 
         JSONObject obj = new JSONObject();
         obj.put("executable",Constants.preRunScriptFile);
         obj.put("background","false");
-*/
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
                 // set desired capabilities to launch appropriate browser on Sauce
@@ -198,7 +199,7 @@ public  class TestBase  {
                 capabilities.setCapability("extendedDebugging", Constants.isDebugFlag);
                 capabilities.setCapability("tags", Constants.tag);
               //  capabilities.setCapability("build", Constants.buildNumber);
-                //      capabilities.setCapability("TunnelIdentifier", Constants.tunnelIdentifier);
+                capabilities.setCapability("TunnelIdentifier", tunnelID);
             //    capabilities.setCapability("prerun", obj);
 
         if (buildTag != null) {
