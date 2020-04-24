@@ -199,6 +199,7 @@ public  class TestBase  {
                 capabilities.setCapability("extendedDebugging", Constants.isDebugFlag);
                 capabilities.setCapability("tags", Constants.tag);
               //  capabilities.setCapability("build", Constants.buildNumber);
+               capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
                 capabilities.setCapability("TunnelIdentifier", tunnelID);
             //    capabilities.setCapability("prerun", obj);
 
