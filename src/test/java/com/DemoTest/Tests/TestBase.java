@@ -198,10 +198,9 @@ public  class TestBase  {
                 capabilities.setCapability("name", methodName);
                 capabilities.setCapability("extendedDebugging", Constants.isDebugFlag);
                 capabilities.setCapability("tags", Constants.tag);
-              //  capabilities.setCapability("build", Constants.buildNumber);
-               capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
+              //  capabilities.setCapability("build", Constants.buildNumber);         
                 capabilities.setCapability("TunnelIdentifier", tunnelID);
-            //    capabilities.setCapability("prerun", obj);
+                capabilities.setCapability("prerun", obj);
 
         if (buildTag != null) {
             capabilities.setCapability("build", buildTag);
