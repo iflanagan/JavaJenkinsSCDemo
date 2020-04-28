@@ -100,7 +100,7 @@ public class WebDemoPage {
         Thread.sleep(delay);
         LoginButton.click();
 
-        sauce.sauceContext("Click on Hamburger icon");
+      //  sauce.sauceContext("Click on Hamburger icon");
         System.out.printf("\nClick on Hamburger icon");   
         Thread.sleep(delay);
         hamburgericon.click();
