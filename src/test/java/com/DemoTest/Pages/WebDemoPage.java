@@ -78,24 +78,24 @@ public class WebDemoPage {
     	Boolean value = false;
     	int delay = 3000;
 	    
-	TestBase sauce = new TestBase();    
+	// TestBase sauce = new TestBase();    
     	
     	try
     	
     	{
     	
-    	 sauce.sauceContext("Starting login function now");
+    	// sauce.sauceContext("Starting login function now");
         System.out.printf("\nStarting login function now");
 
-        sauce.sauceContext("Enter username: " +user);
+      //  sauce.sauceContext("Enter username: " +user);
         System.out.printf("\nEnter username: " +user);
         username.sendKeys(user);
 
-        sauce.sauceContext("Enter password: ");
+     //   sauce.sauceContext("Enter password: ");
         System.out.printf("\nEnter Password: " +passwd);
         password.sendKeys(passwd);
 
-        sauce.sauceContext("Click Login button");
+      //  sauce.sauceContext("Click Login button");
         System.out.printf("\nClick Login button");      
         Thread.sleep(delay);
         LoginButton.click();
@@ -105,7 +105,7 @@ public class WebDemoPage {
         Thread.sleep(delay);
         hamburgericon.click();
 
-        sauce.sauceContext("Performing validation");
+      //  sauce.sauceContext("Performing validation");
         System.out.printf("\nPerforming validation");   
         Thread.sleep(delay);
         
@@ -113,14 +113,14 @@ public class WebDemoPage {
         if(driver.getPageSource().contains("Logout")){
             
             System.out.println("\nYay Login Passed");
-            sauce.sauceContext("Login Passed");
+       //     sauce.sauceContext("Login Passed");
             value = true;
             
             }
         
         else {
             System.out.println("\nLogin Failed");
-            sauce.sauceContext("Login Failed");
+         //   sauce.sauceContext("Login Failed");
             
             }
         
@@ -129,7 +129,7 @@ public class WebDemoPage {
         //   wait.until(ExpectedConditions.textToBePresentInElement(username, user));
 
 
-        sauce.sauceContext("Click Logout link");
+   //     sauce.sauceContext("Click Logout link");
         LogoutButton.click();
     	    	
     	
