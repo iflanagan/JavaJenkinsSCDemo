@@ -77,50 +77,61 @@ public class WebDemoPage {
     	
     	Boolean value = false;
     	int delay = 3000;
+	    
+	TestBase sauce = new TestBase();    
     	
     	try
     	
     	{
     	
-    	System.out.printf("\nStarting login function now");
-    	
-    	System.out.printf("\nEnter username: " +user);
-    	username.sendKeys(user);
-    	
-    	System.out.printf("\nEnter Password: " +passwd);
-    	password.sendKeys(passwd);
-    	
-    	System.out.printf("\nClick Login button");   	
-    	Thread.sleep(delay);
-    	LoginButton.click();
-    	
-    	System.out.printf("\nClick on Hamburger icon");   
-    	Thread.sleep(delay);
-    	hamburgericon.click();
-    	
-    	System.out.printf("\nPerforming validation");   
-    	Thread.sleep(delay);
-    	
-    	
-    	if(driver.getPageSource().contains("Logout")){
-    		
-    		System.out.println("\nYay Login Passed");
-    		value = true;
-    		
-    		}
-    	
-    	else {
-    		System.out.println("\nLogin Failed");
-    		
-    		}
-    	
-    	  // Race condition for time to populate yourCommentsSpan
+    	 sauce.sauceContext("Starting login function now");
+        System.out.printf("\nStarting login function now");
+
+        sauce.sauceContext("Enter username: " +user);
+        System.out.printf("\nEnter username: " +user);
+        username.sendKeys(user);
+
+        sauce.sauceContext("Enter password: ");
+        System.out.printf("\nEnter Password: " +passwd);
+        password.sendKeys(passwd);
+
+        sauce.sauceContext("Click Login button");
+        System.out.printf("\nClick Login button");      
+        Thread.sleep(delay);
+        LoginButton.click();
+
+        sauce.sauceContext("Click on Hamburger icon");
+        System.out.printf("\nClick on Hamburger icon");   
+        Thread.sleep(delay);
+        hamburgericon.click();
+
+        sauce.sauceContext("Performing validation");
+        System.out.printf("\nPerforming validation");   
+        Thread.sleep(delay);
+        
+        
+        if(driver.getPageSource().contains("Logout")){
+            
+            System.out.println("\nYay Login Passed");
+            sauce.sauceContext("Login Passed");
+            value = true;
+            
+            }
+        
+        else {
+            System.out.println("\nLogin Failed");
+            sauce.sauceContext("Login Failed");
+            
+            }
+        
+          // Race condition for time to populate yourCommentsSpan
          //  WebDriverWait wait = new WebDriverWait(driver, 15);
         //   wait.until(ExpectedConditions.textToBePresentInElement(username, user));
-    	
-    	LogoutButton.click();
-    	
-    	
+
+
+        sauce.sauceContext("Click Logout link");
+        LogoutButton.click();
+    	    	
     	
     	}
     	
