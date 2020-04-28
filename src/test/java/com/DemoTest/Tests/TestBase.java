@@ -301,7 +301,7 @@ public  class TestBase  {
 
     
     public  void sauceContext(String text) {
-        ((JavascriptExecutor) webDriver.get()).executeScript("sauce:context=" + text)
+        ((JavascriptExecutor) webDriver.get()).executeScript("sauce:context=" + text);
     }
 
     @AfterMethod
